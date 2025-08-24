@@ -1,0 +1,231 @@
+/*=============== VARIABLES CSS ===============*/
+:root {
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: hsl(265, 75%, 48%);
+    --second-color: hsl(18, 88%, 58%);
+    --title-color: hsl(220, 20%, 8%);
+    --text-color: hsl(220, 8%, 35%);
+    --white-color: hsl(0, 0%, 100%);
+    --body-color: hsl(220, 4%, 99%);
+    --container-color: hsl(0, 0%, 100%);
+
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: "Arial", sans-serif;
+    --second-font: "Arial", sans-serif;
+    --h1-font-size: 1.5rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+
+    /*========== Font weight ==========*/
+    --font-regular: 400;
+    --font-semi-bold: 600;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1150px) {
+    :root {
+        --h1-font-size: 2.25rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+    }
+}
+
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--second-font);
+    color: var(--title-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+}
+
+/*=============== TESTIMONIAL CARD ===============*/
+.testimonial {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: whitesmoke;
+}
+
+.testimonial__swiper {
+    padding-bottom: 7rem;
+}
+
+.testimonial__title {
+    font-size: var(--h1-font-size);
+    font-weight: bold;
+    text-align: center;
+}
+
+.testimonial__card {
+    width: 280px;
+    background-color: var(--container-color);
+    box-shadow: 0 8px 16px hsla(265, 75%, 4%, .1);
+    padding: 2rem 1.5rem 3rem;
+    border-radius: 1.5rem;
+    text-align: center;
+}
+
+.testimonial__img {
+    width: 200px;
+    border-radius: 4rem;
+    border: 4px solid blue;
+    margin: 0 auto .5rem;
+}
+
+.testimonial__name {
+    font-size: var(--h3-font-size);
+    font-weight: 600;
+    margin: 2rem 0;
+}
+
+.testimonial__title-description {
+    text-align: center;
+    margin-top: -3rem;
+}
+
+/* Medium screens: tablets / small laptops */
+@media screen and (max-width: 1152px) {
+    .testimonial__title {
+        font-size: 2rem;
+        /* smaller heading */
+        margin-bottom: 2rem;
+
+    }
+
+    .testimonial__title-description {
+        font-size: 1.1rem;
+        /* smaller description */
+        margin-top: -2rem;
+        padding: 0 20px;
+        /* add horizontal padding */
+        line-height: 1.5;
+        /* improve readability */
+    }
+}
+
+/* Small screens: mobile */
+@media screen and (max-width: 780px) {
+    .testimonial__title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .testimonial__title-description {
+        font-size: 1rem;
+        margin-top: -1.5rem;
+        padding: 0 10px;
+        line-height: 1.5;
+    }
+}
+
+
+/* Swiper class */
+.testimonial .swiper-pagination-bullets {
+    bottom: 4rem;
+}
+
+.testimonial .swiper-pagination-bullet {
+    background-color: blue;
+    transition: opacity .4s;
+}
+
+.testimonial .swiper-button-prev {
+    left: calc(50% - 3rem);
+}
+
+.testimonial .swiper-button-next {
+    right: calc(50% - 3rem);
+}
+
+.testimonial .swiper-button-prev::after,
+.testimonial .swiper-button-next::after {
+    content: "";
+}
+
+.testimonial :is(.swiper-button-prev, .swiper-button-next) {
+    top: initial;
+    bottom: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: blue;
+    color: var(--white-color);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 300px) {
+    .testimonial__title {
+        font-size: 1.25rem;
+    }
+
+    .testimonial__card {
+        width: 240px;
+        padding-inline: 1rem;
+    }
+}
+
+/* For medium devices */
+@media screen and (min-width: 640px) {
+    .testimonial__swiper {
+        max-width: 640px;
+    }
+}
+
+/* For large devices */
+@media screen and (min-width: 1150px) {
+    .testimonial__swiper {
+        max-width: 760px;
+    }
+
+    .testimonial__title {
+        margin-bottom: 4rem;
+    }
+
+    .testimonial__card {
+        width: 330px;
+        padding: 3rem 2rem 4rem;
+        border-radius: 2rem;
+    }
+
+    .testimonial__number {
+        font-size: var(--normal-font-size);
+    }
+}

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swiftlink</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+
+<body>
+
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="./IMG/navbar-logo.png" class="navbar-logo" alt="Logo">
+                </a>
+
+                <!-- Toggler Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menu Items -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home" data-translate="home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about" data-translate="about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#service" data-translate="services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact" data-translate="contact">Contact</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="language-toggle dropdown-toggle" href="#" id="langMenu" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-globe"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langMenu">
+                                <li><a class="dropdown-item" href="?lang=en">English</a></li>
+                                <li><a class="dropdown-item" href="?lang=ar">العربية</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Hero -->
+    <section id="home" class="home ">
+        <video autoplay loop muted playsinline class="hero-video">
+            <source src="IMG/hero-bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="home-detail">
+            <h1 data-translate="hero_title">Expert Consulting <br>and Reliable Technical Support</h1>
+            <p data-translate="hero_description">We build powerful, innovative applications that drive your business
+                forward
+                through technology. <br>
+                Our expertise includes:</p>
+            <h2><span id="typed-it"></span></h2>
+            <button data-translate="hero_button">Get a Free Consultation</button>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-container">
+            <!-- Left Column: Image + Header -->
+            <div class="about-left" data-aos="fade-down">
+                <h2 data-translate="about-who-we-are">Who We Are</h2>
+                <h1 data-translate="about_title">An IT company with a focus <br>on your success.</h1>
+                <img src="./IMG/swiftlink-team.jpg" alt="IT Team Members" class="about-us-image">
+            </div>
+
+            <!-- Right Column: Cards -->
+            <div class="about-text-cards">
+                <p class="about-us-tagline" data-translate="about_tagline">Our Identity, Vision and Values</p>
+                <div class="cards-container">
+                    <div class="card" data-aos="fade-up" data-aos-delay="400">
+                        <h3 data-translate="about_mission_title">Our Mission</h3>
+                        <p data-translate="about_mission_description">To provide your company with affordable, <br>
+                            high-quality IT products and services with efficient, <br>
+                            professional customer service and <br>
+                            support that will help your business grow and succeed. <br>
+                            We pride ourselves on our commitment <br>
+                            to providing outstanding customer satisfaction <br>
+                            and ensuring our clients get exactly what they need when they need it.</p>
+                    </div>
+                    <div class="card" data-aos="fade-up" data-aos-delay="600">
+                        <h3 data-translate="about_vision_title">Our Vision</h3>
+                        <p data-translate="about_vision_description">We strive to fill the need for <br>
+                            efficient and innovative technologies <br>
+                            with cutting-edge solutions <br>
+                            that will make your life easier. <br>
+                            To revolutionize the way technology works by creating a simple <br>
+                            and intuitive user experience, <br>
+                            no matter the age or level of technical ability, through our products.</p>
+                    </div>
+                </div>
+                <a href="about-us.html">
+                    <button class="learn-more-button" data-aos="zoom-in" data-aos-delay="1000"
+                        data-translate="about_learn_more_button">Learn More</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="service">
+        <h2 class="section-title" data-translate="services_title">Our Services</h2>
+
+        <!-- Swiper wrapper -->
+        <div class="swiper services-swiper">
+            <div class="swiper-wrapper">
+
+                <!-- Service 1 -->
+                <div class="swiper-slide service-card" data-aos="fade-up">
+                    <img src="./IMG/web_dev.jpg" alt="Web Design and Development">
+                    <h3 data-translate="services_web_design">Web Design and Development</h3>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="swiper-slide service-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="./IMG/mobile_dev.jpg" alt="Mobile App Development">
+                    <h3 data-translate="services_mobile_app">Mobile App Development</h3>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="swiper-slide service-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="./IMG/network_support.jpg" alt="Network Support">
+                    <h3 data-translate="services_network_support">Network Support and IT Infrastructure</h3>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="swiper-slide service-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="./IMG/tech_support.jpg" alt="Technical Support">
+                    <h3 data-translate="services_technical_support">Technical Support</h3>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="swiper-slide service-card" data-aos="fade-up" data-aos-delay="400">
+                    <img src="./IMG/cctv.jpg" alt="CCTV Maintenance">
+                    <h3 data-translate="services_cctv_maintenance">CCTV Maintenance</h3>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="swiper-slide service-card" data-aos="fade-up" data-aos-delay="500">
+                    <img src="./IMG/system_dev.jpg" alt="System Development">
+                    <h3 data-translate="services_system_dev">System Development</h3>
+                </div>
+                <!-- Service 1 -->
+                <div class="swiper-slide service-card" data-aos="fade-up">
+                    <img src="./IMG/web_dev.jpg" alt="Web Design and Development">
+                    <h3 data-translate="services_web_design">Web Design and Development</h3>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="swiper-slide service-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="./IMG/mobile_dev.jpg" alt="Mobile App Development">
+                    <h3 data-translate="services_mobile_app">Mobile App Development</h3>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="swiper-slide service-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="./IMG/network_support.jpg" alt="Network Support">
+                    <h3 data-translate="services_network_support">Network Support and IT Infrastructure</h3>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="swiper-slide service-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="./IMG/tech_support.jpg" alt="Technical Support">
+                    <h3 data-translate="services_technical_support">Technical Support</h3>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="swiper-slide service-card" data-aos="fade-up" data-aos-delay="400">
+                    <img src="./IMG/cctv.jpg" alt="CCTV Maintenance">
+                    <h3 data-translate="services_cctv_maintenance">CCTV Maintenance</h3>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="swiper-slide service-card" data-aos="fade-up" data-aos-delay="500">
+                    <img src="./IMG/system_dev.jpg" alt="System Development">
+                    <h3 data-translate="services_system_dev">System Development</h3>
+                </div>
+            </div>
+    </section>
+
+    <section id="contact" class="py-5 bg-light contact-section">
+        <div class="container">
+            <!-- Heading -->
+            <div class="text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="fw-bold" data-translate="contact_title">Let's keep in touch.</h2>
+            </div>
+
+            <!-- Contact Content -->
+            <div class="row gx-4 gy-4">
+
+                <!-- Left Column: Info -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                    <h3 class="mb-3" data-translate="contact_info_title">Perfect Solution Call Center</h3>
+
+                    <p>
+                        <strong data-translate="contact_info_address">📍 Address / Location</strong><br>
+                        #7690 Al Najah 4220, Al Yamuk Dist.<br>
+                        Postal Code 13251, Riyadh, Kingdom of Saudi Arabia
+                    </p>
+
+                    <p>
+                        <strong data-translate="contact_info_phone">📞 Phone Number</strong><br>
+                        <a href="tel:00966542262555" class="text-dark">00966542262555</a>
+                    </p>
+
+                    <p>
+                        <strong data-translate="contact_info_email">📧 Email Address</strong><br>
+                        <a href="mailto:info@swiftlink-ksa.com" class="text-dark">info@swiftlink-ksa.com</a>
+                    </p>
+
+                    <p>
+                        <strong data-translate="contact_info_social_media">🌐 Social Media</strong>
+                    </p>
+                    <div class="d-flex gap-3 mt-2">
+                        <a href="#" class="text-primary fs-5" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-danger fs-5" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="text-primary fs-5" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Form -->
+                <div class="col-lg-6" data-aos="fade-down" data-aos-duration="1000">
+                    <form class="d-flex flex-column gap-3">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <input data-translate="contact_form_first_name" type="text" class="form-control"
+                                    placeholder="First Name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input data-translate="contact_form_last_name" type="text" class="form-control"
+                                    placeholder="Last Name" required>
+                            </div>
+                        </div>
+                        <input data-translate="contact_form_email" type="email" class="form-control"
+                            placeholder="Email Address" required>
+                        <input data-translate="contact_form_topic" type="text" class="form-control"
+                            placeholder="Topics or Problem..." required>
+                        <textarea data-translate="contact_form_message" class="form-control" rows="5"
+                            placeholder="Input Message Here" required></textarea>
+                        <button type="submit" class="btn btn-primary rounded-pill"
+                            data-translate="contact_form_send_button">
+                            <i class="fas fa-paper-plane me-2"></i>Send a Message
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row text-white">
+
+                <!-- About -->
+                <div class="col-md-3 mb-4">
+                    <h2 class="fw-bold" data-translate="about-title">Swiftlink</h2>
+                    <p class="text-purple fw-bold" data-translate="about-tagline">IT COMPANY</p>
+                    <p data-translate="about-description">We have rapidly grown into a trusted partner for organizations
+                        seeking digital transformation, enhanced
+                        operational efficiency.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-2 mb-4">
+                    <h5 class="fw-bold" data-translate="quick_links_title">Quick Link</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="footer-link" data-translate="home">Home</a></li>
+                        <li><a href="#about" class="footer-link" data-translate="about">About Us</a></li>
+                        <li><a href="#service" class="footer-link" data-translate="services">Services</a></li>
+
+                        <li><a href="#contact" class="footer-link" data-translate="contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-md-3 mb-4">
+                    <h5 class="fw-bold" data-translate="contact">Contact Us</h5>
+                    <p><strong data-translate="contact_info_phone">Phone:</strong> 00966542262555</p>
+                    <p><strong data-translate="contact_info_email">Email:</strong>info@swiftlink-ksa.com</p>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold" data-translate="subscribe_newsletter_title">Subscribe Our Newsletter</h5>
+                    <form class="d-flex mb-2">
+                        <input type="email" class="form-control rounded-start" placeholder="Email" required>
+                        <button class="btn btn-purple rounded-end" type="submit"
+                            data-translate="subscribe_newsletter_button">Subscribe</button>
+                    </form>
+                    <small class="text-secondary" data-translate="subscribe_newsletter_required">This field is
+                        required</small>
+                    <div class="mt-3">
+                        <i class="fa-solid fa-phone"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-regular fa-envelope"></i>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="border-purple">
+            <div class="text-center text-white mt-3">
+                <p class="mb-0" data-translate="copyright">Copyright by Swiftlink Company . All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery (optional, only once) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+
+    <!-- AOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- Typed.js (optional) -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Your Swiper initialization -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const swiper = new Swiper(".services-swiper", {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                breakpoints: {
+                    600: { slidesPerView: 2 },
+                    900: { slidesPerView: 3 },
+                },
+            });
+
+            // Initialize AOS animations
+            AOS.init({
+                duration: 1500, // default animation duration in ms
+                easing: 'ease-in-out', // optional, smooth easing
+                once: false, // keep animations on scroll
+            });
+        });
+    </script>
+
+
+
+    <!-- Your custom JS -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
