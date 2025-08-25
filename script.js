@@ -6,8 +6,9 @@ $(document).ready(function () {
         .then(response => response.json())
         .then(translations => {
 
+            // Typed animation
             function startTyping(lang) {
-                if ($("#typed-it").length) { // only if element exists
+                if ($("#typed-it").length) {
                     if (typed) typed.destroy();
                     $("#typed-it").text("");
                     $("#typed-it").attr("dir", "ltr").css("text-align", "left");
@@ -21,6 +22,7 @@ $(document).ready(function () {
                 }
             }
 
+            // Translation function
             function setLanguage(lang) {
                 currentLang = lang;
 
@@ -29,8 +31,11 @@ $(document).ready(function () {
                     if (translations[lang][key]) {
                         const value = translations[lang][key];
 
-                        // ✅ If translation contains HTML, use .html(), else use .text()
-                        if (/<[a-z][\s\S]*>/i.test(value)) {
+                        if ($(this).is("input") || $(this).is("textarea")) {
+                            $(this).attr("placeholder", value);
+                        } else if ($(this).is("option")) {
+                            $(this).text(value);
+                        } else if (/<[a-z][\s\S]*>/i.test(value)) {
                             $(this).html(value);
                         } else {
                             $(this).text(value);
@@ -38,24 +43,24 @@ $(document).ready(function () {
                     }
                 });
 
+                // Keep everything LTR
                 $("body").attr("dir", "ltr");
+
                 startTyping(lang);
             }
 
-            setLanguage(currentLang);
-
+            // Handle language switch dropdown
             $(".dropdown-item").on("click", function (e) {
                 e.preventDefault();
                 const lang = $(this).attr("href").replace("?lang=", "");
                 setLanguage(lang);
-                localStorage.setItem("lang", lang); // ✅ Remember language across pages
+                localStorage.setItem("lang", lang); // Remember language across pages
             });
 
-            // Restore language on page load
-            const savedLang = localStorage.getItem("lang");
-            if (savedLang) {
-                setLanguage(savedLang);
-            }
+            // Restore language on page load or default to English
+            const savedLang = localStorage.getItem("lang") || "en";
+            setLanguage(savedLang);
+            currentLang = savedLang;
 
             // Scroll animation only if .contact-section exists
             const contactSection = document.querySelector(".contact-section");

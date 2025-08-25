@@ -21,6 +21,10 @@
 </head>
 
 <body>
+    <!-- about-us.html -->
+    <a href="index.html" class="back-arrow">
+        &#8592;
+    </a>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-aos="fade-up"
         data-aos-duration="1000">
         <ol class="carousel-indicators">
@@ -127,17 +131,18 @@
         </div>
     </section>
 
-    <footer class="footer py-5">
+    <footer class="footer py-5 bg-dark">
         <div class="container">
-            <div class="row text-white">
+            <div class="row text-white text-center justify-content-center">
 
                 <!-- About -->
                 <div class="col-md-3 mb-4">
-                    <h2 class="fw-bold" data-translate="about-title">Swiftlink</h2>
+                    <h2 class="fw-bold text-white" data-translate="about-title">Swiftlink</h2>
                     <p class="text-purple fw-bold" data-translate="about-tagline">IT COMPANY</p>
-                    <p data-translate="about-description">We have rapidly grown into a trusted partner for organizations
-                        seeking digital transformation, enhanced
-                        operational efficiency.</p>
+                    <p data-translate="about-description">
+                        We have rapidly grown into a trusted partner for organizations seeking digital transformation,
+                        enhanced operational efficiency.
+                    </p>
                 </div>
 
                 <!-- Quick Links -->
@@ -147,7 +152,6 @@
                         <li><a href="#home" class="footer-link" data-translate="home">Home</a></li>
                         <li><a href="#about" class="footer-link" data-translate="about">About Us</a></li>
                         <li><a href="#service" class="footer-link" data-translate="services">Services</a></li>
-
                         <li><a href="#contact" class="footer-link" data-translate="contact">Contact Us</a></li>
                     </ul>
                 </div>
@@ -155,33 +159,40 @@
                 <!-- Contact -->
                 <div class="col-md-3 mb-4">
                     <h5 class="fw-bold" data-translate="contact">Contact Us</h5>
-                    <p><strong data-translate="contact_info_phone">Phone:</strong> 00966542262555</p>
-                    <p><strong data-translate="contact_info_email">Email:</strong>info@swiftlink-ksa.com</p>
+                    <p data-translate="contact_info_phone">Phone: 00966542262555</p>
+                    <p data-translate="contact_info_email">Email: info@swiftlink-ksa.com</p>
                 </div>
 
                 <!-- Newsletter -->
                 <div class="col-md-4 mb-4">
                     <h5 class="fw-bold" data-translate="subscribe_newsletter_title">Subscribe Our Newsletter</h5>
-                    <form class="d-flex mb-2">
-                        <input type="email" class="form-control rounded-start" placeholder="Email" required>
-                        <button class="btn btn-purple rounded-end" type="submit"
-                            data-translate="subscribe_newsletter_button">Subscribe</button>
+                    <form class="d-flex flex-column flex-sm-row justify-content-center mb-2">
+                        <input type="email" class="form-control rounded-start mb-2 mb-sm-0" data-translate="subscribe_newsletter_email" placeholder="Email"
+                            required>
+                        <button class="btn btn-purple rounded-end ms-sm-2" type="submit"
+                            data-translate="subscribe_newsletter_button">
+                            Subscribe
+                        </button>
                     </form>
-                    <small class="text-secondary" data-translate="subscribe_newsletter_required">This field is
-                        required</small>
+                    <small class="text-secondary d-block mb-2" data-translate="subscribe_newsletter_required">
+                        This field is required
+                    </small>
                     <div class="mt-3">
-                        <i class="fa-solid fa-phone"></i>
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-regular fa-envelope"></i>
-
+                        <i class="fa-solid fa-phone me-2"></i>
+                        <i class="fa-brands fa-facebook me-2"></i>
+                        <i class="fa-regular fa-envelope me-2"></i>
                     </div>
                 </div>
 
             </div>
 
             <hr class="border-purple">
+
+            <!-- Footer copyright -->
             <div class="text-center text-white mt-3">
-                <p class="mb-0" data-translate="copyright">Copyright by Swiftlink Company . All Rights Reserved.</p>
+                <p class="mb-0" data-translate="copyright">
+                    Copyright by Swiftlink Company. All Rights Reserved.
+                </p>
             </div>
         </div>
     </footer>

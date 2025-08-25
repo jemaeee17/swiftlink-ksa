@@ -11,9 +11,7 @@ body {
 
 .navbar-logo {
     max-height: 60px;
-    /* keeps logo inside navbar */
     width: auto;
-    /* maintain aspect ratio */
     height: auto;
 }
 
@@ -115,15 +113,12 @@ body {
 
     .navbar .language-toggle {
         margin-left: 0;
-        /* align with other links in vertical collapse */
         margin-top: 0;
     }
 
     .navbar .nav-item.dropdown {
         width: 100%;
-        /* dropdown full width like other nav items */
         text-align: center;
-        /* center the globe icon */
     }
 
 }
@@ -132,7 +127,6 @@ body {
 
     .nav-links {
         text-align: right;
-        /* default desktop alignment */
     }
 
     .nav-link {
@@ -145,7 +139,6 @@ body {
 
     .home-detail p {
         font-size: 1.25rem;
-        /* slightly bigger text on larger screens */
     }
 
     .navbar-logo {
@@ -223,7 +216,7 @@ body {
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
 }
 
-.home-detail button {
+.custom-btn {
     position: relative;
     padding: 10px 45px;
     font-size: 1.1rem;
@@ -239,7 +232,7 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.home-detail button::before {
+.custom-btn::before {
     content: "";
     position: absolute;
     top: 0;
@@ -253,7 +246,7 @@ body {
 }
 
 /* On hover: fill left → right */
-.home-detail button:hover::before {
+.custom-btn:hover::before {
     width: 100%;
 }
 
@@ -299,7 +292,6 @@ a {
 @media (max-width: 480px) {
     .home .home-detail {
         margin-top: 1rem;
-        /* extra push for small screens */
     }
 
     .home .home-detail h1 {
@@ -378,10 +370,8 @@ a {
     position: absolute;
     top: 50%;
     left: 20px;
-    /* small padding from left edge */
     transform: translateY(-50%);
     color: white;
-    /* or whatever contrasts with image */
 }
 
 .about-text-cards {
@@ -394,7 +384,6 @@ a {
 .about-container {
     display: flex;
     align-items: flex-start;
-    /* Align items at the top */
     gap: 2rem;
     padding: 40px;
 }
@@ -402,9 +391,7 @@ a {
 .about-left {
     display: flex;
     flex-direction: column;
-    /* Stack vertically */
     align-items: center;
-    /* Center horizontally */
     max-width: 50%;
 }
 
@@ -435,6 +422,7 @@ a {
     font-size: 16px;
     color: rgb(83, 81, 81);
     text-align: center;
+    max-width: 700px;
 }
 
 .learn-more-button {
@@ -473,7 +461,6 @@ a {
 @media (max-width: 991px) {
     .about-container {
         flex-direction: column;
-        /* Stack vertically */
         align-items: center;
         padding: 20px;
     }
@@ -485,10 +472,8 @@ a {
 
     .about-us-header {
         position: static;
-        /* ✅ Remove absolute positioning */
         transform: none;
         color: black;
-        /* Switch back for readability */
         text-shadow: none;
         margin-bottom: 15px;
     }
@@ -644,6 +629,11 @@ a {
     font-weight: 500;
     z-index: 2;
     color: rgb(51, 50, 50);
+    max-width: 900px;
+}
+
+.testimonial__title-description {
+    max-width: 900px;
 }
 
 @media (max-width: 1024px) {
@@ -786,18 +776,13 @@ a {
 @media (max-width: 576px) {
     .service-card {
         width: 100% !important;
-        /* full width */
         max-width: 320px;
-        /* keeps nice proportion */
         height: auto !important;
-        /* let height adjust */
         margin: 0 auto;
-        /* center card */
     }
 
     .service-card img {
         height: 200px;
-        /* shrink image for smaller screens */
     }
 
     .service-card h3 {
@@ -884,10 +869,6 @@ a {
         flex-direction: column;
     }
 }
-
-
-
-
 
 /* ==== TEAM SECTION ==== */
 .team-section {
@@ -1018,7 +999,6 @@ a {
     padding: 10px;
     margin: 0;
     min-height: 48px;
-    /* fix height so all cards same */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1060,7 +1040,6 @@ a {
 @media (max-width: 768px) {
     .team-track {
         animation: none;
-        /* patayin animation sa mobile */
         overflow-x: auto;
         scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch;
@@ -1081,17 +1060,10 @@ a {
     }
 }
 
-
-
-
-
-
-
-
-
 /* Footer background at layout */
 .footer {
     background: linear-gradient(to right, #001f3f, #004e92, #00d9a3);
+    padding: 3rem 7rem;
 }
 
 .text-purple {
@@ -1133,4 +1105,194 @@ a {
 
 .logo-icon {
     color: #c300ff;
+}
+
+.footer .row>div {
+    text-align: left;
+}
+
+@media (max-width: 992px) {
+    .footer .row {
+        text-align: center;
+    }
+
+    .footer .row>div {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer {
+        padding: 2rem 1rem;
+    }
+
+    .footer .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .row>div {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Consultation Section */
+.consultation-section {
+    background: url("./IMG/consult-form-bg.jpg") no-repeat center center/cover;
+    position: relative;
+    padding: 80px 20px;
+}
+
+.consultation-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.consultation-card {
+    position: relative;
+    z-index: 2;
+    border-radius: 16px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+.consultation-card label {
+    color: #fff;
+    font-weight: 600;
+}
+
+.consultation-card .form-control,
+.consultation-card .form-select,
+.consultation-card textarea {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: white;
+}
+
+.consultation-card .form-control:focus,
+.consultation-card .form-select:focus,
+.consultation-card textarea:focus {
+    outline: none;
+    border-color: #00bcd4;
+    box-shadow: 0 0 8px rgba(0, 188, 212, 0.5);
+    background: rgba(255, 255, 255, 0.25);
+    color: black;
+}
+
+.consultation-card h2 {
+    font-weight: 700;
+    color: #fff;
+}
+
+.consultation-card p {
+    color: white;
+}
+
+
+.custom-btn-red {
+    position: relative;
+    padding: 10px 45px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: black;
+    background: white;
+    border: 1px solid #f28b82;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+    margin-top: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.custom-btn-red::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(135deg, #f28b82, #eb5143, #cd0e0e);
+    border-radius: 50px;
+    z-index: -1;
+    transition: width 0.8s ease;
+}
+
+/* On hover: fill left → right */
+.custom-btn-red:hover::before {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .consultation-card {
+        padding: 25px;
+    }
+
+    .custom-btn-red,
+    .custom-btn {
+        font-weight: bold;
+        padding: 6px 12px;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .consultation-section {
+        padding: 60px 10px;
+    }
+
+    .consultation-card {
+        padding: 20px;
+    }
+
+    .consultation-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .consultation-card p {
+        font-size: 0.9rem;
+    }
+
+    .custom-btn-red {
+        padding: 6px 12px;
+        font-size: 12px;
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+}
+
+.back-arrow {
+    position: fixed;
+    top: 10px;
+    left: 25px;
+    font-size: 24px;
+    text-decoration: none;
+    color: #333;
+    z-index: 1;
+    transform: scale(1.5);
+}
+
+.back-arrow:hover {
+    color: #666;
+    text-decoration: none;
+    transform: scale(1.5);
 }

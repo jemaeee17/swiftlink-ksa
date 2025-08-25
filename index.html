@@ -78,7 +78,12 @@
                 through technology. <br>
                 Our expertise includes:</p>
             <h2><span id="typed-it"></span></h2>
-            <button data-translate="hero_button">Get a Free Consultation</button>
+
+            <button class="consult-btn custom-btn" data-translate="hero_button"
+                onclick="window.open('consult-form.html', '_blank')">
+                Get a Free Consultation
+            </button>
+
         </div>
     </section>
 
@@ -117,7 +122,7 @@
                     </div>
                 </div>
                 <a href="about-us.html">
-                    <button class="learn-more-button" data-aos="zoom-in" data-aos-delay="1000"
+                    <button class="learn-more-button custom-btn" data-aos="zoom-in" data-aos-delay="1000"
                         data-translate="about_learn_more_button">Learn More</button>
                 </a>
             </div>
@@ -217,21 +222,18 @@
 
                 <!-- Left Column: Info -->
                 <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
-                    <h3 class="mb-3" data-translate="contact_info_title">Perfect Solution Call Center</h3>
+                    <h3 class="mb-3" data-translate="contact_info_title">Contact Us</h3>
 
-                    <p>
-                        <strong data-translate="contact_info_address">📍 Address / Location</strong><br>
+                    <p data-translate="contact_info_address">📍 Address / Location <br>
                         #7690 Al Najah 4220, Al Yamuk Dist.<br>
                         Postal Code 13251, Riyadh, Kingdom of Saudi Arabia
                     </p>
 
-                    <p>
-                        <strong data-translate="contact_info_phone">📞 Phone Number</strong><br>
+                    <p data-translate="contact_info_phone">📞 Phone Number <br>
                         <a href="tel:00966542262555" class="text-dark">00966542262555</a>
                     </p>
 
-                    <p>
-                        <strong data-translate="contact_info_email">📧 Email Address</strong><br>
+                    <p data-translate="contact_info_email">📧 Email Address <br>
                         <a href="mailto:info@swiftlink-ksa.com" class="text-dark">info@swiftlink-ksa.com</a>
                     </p>
 
@@ -317,7 +319,7 @@
                 <div class="col-md-4 mb-4">
                     <h5 class="fw-bold" data-translate="subscribe_newsletter_title">Subscribe Our Newsletter</h5>
                     <form class="d-flex mb-2">
-                        <input type="email" class="form-control rounded-start" placeholder="Email" required>
+                        <input type="email" class="form-control rounded-start" data-translate="subscribe_newsletter_email" placeholder="Email" required>
                         <button class="btn btn-purple rounded-end" type="submit"
                             data-translate="subscribe_newsletter_button">Subscribe</button>
                     </form>
